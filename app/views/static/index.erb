@@ -1,2 +1,22 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+<p>
+This shortens your urls!
+</p>
+
+<form action= "/urls" method="post">
+	Enter URL 
+	<input type ="text" name="long_url">
+	<input type="submit" value="Submit">
+</form>
+
+<table style="width:100%">
+  <tr>
+    <th>URL</th>
+    <th>Short URL</th>
+  </tr>
+ <% @urls.each do |url| %>
+   <tr> 
+   	<td><a href="<%=url.short_url%>"><%= url.url%></a></td>
+   	<td><a href="<%=url.short_url%>"><%= url.short_url%></a></td>
+   </tr>
+ <% end %>
+</table> 
