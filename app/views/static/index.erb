@@ -2,6 +2,9 @@
 This shortens your urls!
 </p>
 
+
+<%= @errors if @errors %>
+
 <form action= "/urls" method="post">
 	Enter URL 
 	<input type ="text" name="long_url">
@@ -10,7 +13,7 @@ This shortens your urls!
 
 <table style="width:100%">
   <tr>
-    <th>URL</th>
+    <th><h1>URL</h1></th>
     <th>Short URL</th>
     <th>Clicks!</th>
   </tr>
@@ -22,3 +25,5 @@ This shortens your urls!
    </tr>
  <% end %>
 </table> 
+
+
