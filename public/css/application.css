@@ -16,11 +16,13 @@ table,th,td {
 
 p {
 	font-family: "Helvetica Neue", Helvetica, Arial;
+	text-align: center;
 }
 
 #pagetitle {
 	text-align: center;
-	font-size: 2.5em;
+	font-size: 4em;
+	color: darkblue;
 	font-weight: bold;
 	font-family: "Helvetica Neue", Helvetica, Arial;
 
@@ -31,4 +33,15 @@ body {
 	background-size : cover;
 	background-repeat: no-repeat;
 	background-position: center center 
+}
+
+input[type=text] {
+	width: 25vw;
+	display: block;
+	margin: 0 auto;
+}
+
+input[type=submit] {
+	display: block;
+	margin: 0 auto;
 }
