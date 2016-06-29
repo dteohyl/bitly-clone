@@ -1,4 +1,3 @@
-require 'byebug'
 get '/' do
 	@urls = Url.all
 	@errors = params[:error_msg]
@@ -15,7 +14,7 @@ post '/urls' do
 		redirect '/'
 
 	else
-		@errors = "#{@url.errors.full_messages.join(",")}"# this will display error message that u inserted in ur model validation test
+		@errors = "#{@url.errors.full_messages.join(" AND ")}"# this will display error message that u inserted in ur model validation test
 		# erb :"static/index"
 		redirect "/?error_msg=#{@errors}"
 	end

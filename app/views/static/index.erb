@@ -1,9 +1,14 @@
-<p>
-This shortens your urls!
+<p id="pagetitle">
+  Bitly Clone
 </p>
 
+<p>
+  This shortens your urls! Give it a go (:
+</p>
 
-<%= @errors if @errors %>
+<p>
+  <%= @errors if @errors %>
+</p>
 
 <form action= "/urls" method="post">
 	Enter URL 
@@ -11,9 +16,9 @@ This shortens your urls!
 	<input type="submit" value="Submit">
 </form>
 
-<table style="width:100%">
+<table>
   <tr>
-    <th><h1>URL</h1></th>
+    <th>URL</th>
     <th>Short URL</th>
     <th>Clicks!</th>
   </tr>
@@ -25,5 +30,6 @@ This shortens your urls!
    </tr>
  <% end %>
 </table> 
+
 
 
