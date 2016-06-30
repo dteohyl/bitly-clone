@@ -13,6 +13,9 @@ table,th,td {
 	font-family: "Helvetica Neue", Helvetica, Arial;
 }
 
+th { 
+	background-color: darkorange ;
+	color: white; }
 
 p {
 	font-family: "Helvetica Neue", Helvetica, Arial;
@@ -39,6 +42,7 @@ p {
 	font-size: 2em;
 	color: darkorange;
 	font-weight: bold;
+	text-shadow: 1px 1px;
 }
 
 body {
@@ -77,3 +81,4 @@ img {
 	display:block;
 	margin: 0 auto;
 }
+
