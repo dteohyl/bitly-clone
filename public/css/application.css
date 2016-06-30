@@ -21,11 +21,24 @@ p {
 
 #pagetitle {
 	text-align: center;
-	font-size: 4em;
-	color: darkblue;
+	font-size: 2em;
+	color: black;
 	font-weight: bold;
 	font-family: "Helvetica Neue", Helvetica, Arial;
 
+}
+
+#displaymessage {
+	font-size: 3em;
+	font-weight: bold;
+	color: red;
+
+}
+
+#promptmessage {
+	font-size: 2em;
+	color: darkorange;
+	font-weight: bold;
 }
 
 body {
@@ -39,9 +52,28 @@ input[type=text] {
 	width: 25vw;
 	display: block;
 	margin: 0 auto;
+	border: 2px solid green;
+	border-radius: 4px;
+	padding: 12px 20px;
+
 }
 
 input[type=submit] {
 	display: block;
+	margin: 20px auto;
+	padding: 12px 20px;
+	width: 15vw;
+	color: white;
+	background-color: green;
+
+}
+
+input[type=submit]:hover {
+	background-color: lightgreen;
+
+}
+
+img {
+	display:block;
 	margin: 0 auto;
 }
