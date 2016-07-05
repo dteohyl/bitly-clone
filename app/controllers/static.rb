@@ -6,7 +6,6 @@ end
 
 
 post '/urls' do
-	@urls = Url.all
 	@url = Url.new(url: params[:long_url])
 	# byebug
 	if @url.save #it will go to app/models/url.rb go thru all the validation tests

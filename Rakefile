@@ -7,6 +7,10 @@ require ::File.expand_path('../config/environments/init', __FILE__)
 # Require all ActiveSupport's class and extensions
 require 'active_support/core_ext'
 
+task :environment do
+ Sinatra::Application.environment = ENV['RACK_ENV']
+end
+
 namespace :generate do
 	desc "Create empty model spec in spec, e.g., rake generate:spec NAME=test_name"
 	task :spec do
@@ -127,6 +131,13 @@ namespace :db do
 	task :version do
 		puts "Current version: #{ActiveRecord::Migrator.current_version}"
 	end
+
+	 desc 'Rolls the schema back to the previous version. Specify the number of steps with STEP=n'
+  	task :rollback => :environment do
+    step = ENV['STEP'] ? ENV['STEP'].to_i : 1
+    version = ActiveRecord::Migrator.current_version - step
+    ActiveRecord::Migrator.migrate('db/migrate/', version)
+  end
 end
 
 
@@ -203,3 +214,4 @@ Database
 	$ rake db:version
 "
 end
+

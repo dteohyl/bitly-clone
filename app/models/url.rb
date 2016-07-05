@@ -1,9 +1,9 @@
 class Url < ActiveRecord::Base
 
 	validates :url , uniqueness:{ case_sensitive: false}
-	validates_format_of :url, with: /(http[s]?.*|w{3}[.].*)/, message: "format is invalid"
+	validates_format_of :url, with: /\A(http[s]?.*|w{3}[.].*)/, message: "format is invalid"
 	# before_create :shorten
-	before_create :shorten, :valid_url
+	before_create :shorten
 
 	def shorten
 		self.short_url = SecureRandom.hex(3)
